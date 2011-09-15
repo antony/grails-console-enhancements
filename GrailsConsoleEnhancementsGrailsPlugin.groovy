@@ -19,8 +19,8 @@ class GrailsConsoleEnhancementsGrailsPlugin {
     // TODO Fill in these fields
     def author = "Antony Jones (Desirable Objects)"
     def authorEmail = "aj@desirableobjects.co.uk"
-    def title = "Plugin summary/headline"
-    def description = '''Enhances the grails console output for better visibility'''
+    def title = "Grails console enhancements"
+    def description = 'Enhances the grails console output for better visibility'
 
     // URL to the plugin's documentation
     def documentation = "http://grails.org/plugin/grails-console-enhancements"
