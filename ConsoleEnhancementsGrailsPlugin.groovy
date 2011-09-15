@@ -5,7 +5,7 @@ import uk.co.desirableobjects.console.enhancements.ANSICode
 
 class ConsoleEnhancementsGrailsPlugin {
     // the plugin version
-    def version = "0.1"
+    def version = "0.2"
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "1.3.7 > *"
     // the other plugins this plugin depends on
@@ -36,9 +36,8 @@ class ConsoleEnhancementsGrailsPlugin {
 
         Object.metaClass.println = { String message ->
 
-            println CH.config.console?.colours?.normal
-            List<ANSICode> sequence = CH.config.console?.colours?.normal as List<ANSICode> ?: [FOREGROUND_CYAN, BOLD_ON]
-            Object.metaClass.&println new ANSISequence(sequence).format(message)
+            List<ANSICode> sequence = CH.config.console?.colours?.normal ?: [FOREGROUND_CYAN, BOLD_ON]
+            Object.metaClass.&println new ANSISequence(sequence as List<ANSICode>).format(message)
 
         }
 
