@@ -1,10 +1,9 @@
 import static uk.co.desirableobjects.console.enhancements.ANSICode.*
-import static uk.co.desirableobjects.console.enhancements.ANSIConstants.*
 import org.codehaus.groovy.grails.commons.ConfigurationHolder as CH
 import uk.co.desirableobjects.console.enhancements.ANSISequence
 import uk.co.desirableobjects.console.enhancements.ANSICode
 
-class GrailsConsoleEnhancementsGrailsPlugin {
+class ConsoleEnhancementsGrailsPlugin {
     // the plugin version
     def version = "0.1"
     // the version or versions of Grails the plugin is designed for
