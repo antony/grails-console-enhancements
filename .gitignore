@@ -1,0 +1,10 @@
+*.iws
+*.iml
+*.ipr
+.idea
+.classpath
+.settings
+out
+target
+plugin.xml
+*.zip
