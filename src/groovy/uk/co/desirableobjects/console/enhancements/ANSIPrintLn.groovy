@@ -8,10 +8,4 @@ class ANSIPrintLn {
         return output
     }
 
-    String printLine(String message) {
-
-        
-
-    }
-
 }

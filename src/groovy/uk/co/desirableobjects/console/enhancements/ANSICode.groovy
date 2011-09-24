@@ -1,6 +1,7 @@
 package uk.co.desirableobjects.console.enhancements
 enum ANSICode {
 
+    NONE(null),
     RESET('[0m'),
     BOLD_ON('[1m'),
     ITALICS_ON('[3m'),

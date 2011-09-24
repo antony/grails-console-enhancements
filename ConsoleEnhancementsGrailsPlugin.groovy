@@ -1,13 +1,10 @@
-import static uk.co.desirableobjects.console.enhancements.ANSICode.*
-import org.codehaus.groovy.grails.commons.ConfigurationHolder as CH
-import uk.co.desirableobjects.console.enhancements.ANSISequence
-import uk.co.desirableobjects.console.enhancements.ANSICode
+import uk.co.desirableobjects.console.enhancements.ConsoleEnhancer
 
 class ConsoleEnhancementsGrailsPlugin {
     // the plugin version
-    def version = "0.2"
+    def version = "0.3"
     // the version or versions of Grails the plugin is designed for
-    def grailsVersion = "1.3.7 > *"
+    def grailsVersion = "1.3.1 > *"
     // the other plugins this plugin depends on
     def dependsOn = [:]
     // resources that are excluded from plugin packaging
@@ -34,14 +31,8 @@ class ConsoleEnhancementsGrailsPlugin {
 
     def doWithDynamicMethods = { ctx ->
 
-        Object.metaClass.println = { String message ->
+        ConsoleEnhancer.enhanceConsole()
 
-            List<ANSICode> sequence = CH.config.console?.colours?.normal ?: [FOREGROUND_CYAN, BOLD_ON]
-            Object.metaClass.&println new ANSISequence(sequence as List<ANSICode>).format(message)
-
-        }
-
-        // TODO Implement registering dynamic methods to classes (optional)
     }
 
     def doWithApplicationContext = { applicationContext ->
