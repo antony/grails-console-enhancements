@@ -1,4 +1,5 @@
 import uk.co.desirableobjects.console.enhancements.ConsoleEnhancer
+import uk.co.desirableobjects.console.enhancements.ANSICode
 
 class ConsoleEnhancementsGrailsPlugin {
     // the plugin version
